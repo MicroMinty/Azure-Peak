@@ -758,6 +758,57 @@
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
 
+
+//RUNEPOWDER (help me)
+/obj/item/ammo_casing/caseless/rogue/runepowder //parent of runepowder
+	name = "fae foolery"
+	desc = "You shouldn't be seeing this."
+	projectile_type = /obj/projectile/bullet/runepowder
+	caliber = "runepowder"
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "arrow"
+	force = 5
+	throwforce = 5 
+	dropshrink = 0.6
+	possible_item_intents = list(INTENT_GENERIC) 
+	max_integrity = 20
+	
+/obj/item/ammo_casing/caseless/rogue/runepowder/t2_runepowder 
+	name = "advanced runepowder"
+	desc = "Powder refined of arcyne confluence."
+	projectile_type = /obj/projectile/bullet/runepowder/t2_runepowder
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "stone_sling_bullet"
+
+
+/obj/projectile/bullet/runepowder //thank u john sling
+	name = "basic runepowder"
+	desc = "A clump of flying powder. Is that a spark?"
+	damage = 0
+	damage_type = BRUTE
+	armor_penetration = 0
+	npc_damage_mult = 0
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "musketball_proj"
+	range = 8
+	hitsound = 'sound/combat/hits/blunt/bluntsmall (1).ogg'
+	embedchance = 0
+	woundclass = BCLASS_BLUNT
+	flag = "piercing"
+	speed = 0.7
+	var/splodey = 1
+
+/obj/projectile/bullet/runepowder/t2_runepowder
+	name = "advanced runepowder"
+	damage = 0
+	armor_penetration = 0
+	range = 12
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/runepowder/t2_runepowder
+	splodey = 2
+/obj/projectile/bullet/runepowder/on_hit(target)
+	..()
+	explosion(target, -1, -1, -1, -1, FALSE, TRUE, splodey)
+
 #undef ARROW_DAMAGE
 #undef BOLT_DAMAGE
 #undef BULLET_DAMAGE
