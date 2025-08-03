@@ -775,7 +775,7 @@
 	
 /obj/item/ammo_casing/caseless/rogue/runepowder/t2_runepowder 
 	name = "advanced runepowder"
-	desc = "Powder refined of arcyne confluence."
+	desc = "Powder refined of shimmering scales. Compatible with a runelock's rune. It thrums with potential"
 	projectile_type = /obj/projectile/bullet/runepowder/t2_runepowder
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "stone_sling_bullet"
@@ -796,6 +796,7 @@
 	woundclass = BCLASS_BLUNT
 	flag = "piercing"
 	speed = 0.7
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/runepowder
 	var/splodey = 1
 
 /obj/projectile/bullet/runepowder/t2_runepowder

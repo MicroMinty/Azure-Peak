@@ -1,9 +1,8 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/runelock
 	name = "runelock"
-	desc = "A deadly weapon that shoots a cluster of powder with terrifying power."
-	icon = 'icons/roguetown/weapons/32.dmi'
-	icon_state = "crossbow0"
-	item_state = "crossbow"
+	desc = "An azurian innovation that lobs clusters of fae-made powders with terrifying firey potential, utilizing a rune which projects force forward."
+	icon = 'icons/roguetown/weapons/64.dmi'
+	icon_state = "runelock"
 	experimental_onhip = TRUE
 	experimental_onback = TRUE
 	possible_item_intents = list(/datum/intent/shoot/runelock, INTENT_GENERIC)
@@ -36,8 +35,9 @@
 		..()
 		
 /obj/item/gun/ballistic/revolver/grenadelauncher/runelock/attack_self(mob/user) //you may not unload it.
-	to_chat(user, span_info("It's too dangerous to reach my arm down the barrel... I need to find another way to unload it."))
-	return
+	if(magazine.ammo_count(1))
+		to_chat(user, span_info("It's much too dangerous to reach my arm down the barrel... I need to find another way to unload it."))
+	return 
 /obj/item/ammo_box/magazine/internal/shot/runelock
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/runepowder
 	caliber = "runepowder"
