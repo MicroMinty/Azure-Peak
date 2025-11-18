@@ -77362,7 +77362,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/bog/south)
 "tAN" = (
-/obj/structure/fluff/statue/abyssor,
+/obj/structure/fluff/statue/abyssor/dreamer,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/outdoors/beach/south)
 "tAV" = (

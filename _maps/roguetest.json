@@ -1,8 +1,9 @@
 {
     "map_name": "Roguetest",
     "map_path": "map_files/roguetest",
-    "map_file": "roguetest.dmm",
-	"traits": [{"Name": "Roguetest", "Up": true}, {"Down": true}],
+    "map_file": ["roguetest.dmm", "abisland1.dmm"],
+	"traits": [{"Name": "Roguetest", "Up": true}, {"Down": true},
+	{"Name": "Abyssor's Grasp", "Up": true}, {"Up": true, "Down": true}, {"Down": true}],
 	"minetype": null,
 	"space_empty_levels": 0,
 	"space_ruin_levels": 0,

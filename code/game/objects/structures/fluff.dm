@@ -893,6 +893,26 @@
 	icon = 'icons/roguetown/misc/tallandwide.dmi'
 	pixel_x = -16
 
+/obj/structure/fluff/statue/abyssor/dreamer
+	name = "abyssor statue"
+	desc = "A slate statue of the ancient god abyssor. One of many depictions drawn from a dream no doubt. This particular one is horrifying to look at, and calls for an offering able to pierce the veil of dreams."
+	icon_state = "abyssor"
+	icon = 'icons/roguetown/misc/tallandwide.dmi'
+	pixel_x = -16
+/obj/structure/fluff/statue/abyssor/dreamer/attackby(atom/M, mob/user)
+	if(istype(M, /obj/item/abyssal_marker))
+		new /obj/structure/fluff/traveltile/dreamportal(src.loc)
+		src.visible_message(span_notice("The statue crumbles away into nothingness, collapsing in on itself as a portal forms..."))
+		qdel(M)
+		qdel(src)
+		return
+	if(istype(M, /obj/item/abyssal_marker/volatile))
+		new /obj/structure/fluff/traveltile/dreamportal(src.loc)
+		src.visible_message(span_notice("The statue crumbles away into nothingness, collapsing in on itself as a portal forms..."))
+		qdel(M)
+		qdel(src)
+		return
+
 /obj/structure/fluff/statue/abyssor/dolomite
 	name = "abyssor statue"
 	desc = "A rare dolomite statue of the ancient god abyssor. Hewn from bleached rock as if the shimmer makes his faceless gaze any less terrifying."

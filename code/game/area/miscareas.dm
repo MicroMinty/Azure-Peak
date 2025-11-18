@@ -4,7 +4,7 @@
 	icon_state = "island"
 	ambientsounds = AMB_ABISLAND
 	ambientnight = AMB_ABISLAND
-	droning_sound = 'sound/music/area/morosewaters.ogg'
+	droning_sound = 'sound/ambience/waves.ogg'
 	droning_sound_dusk = 'sound/music/area/morosewaters.ogg'
 	droning_sound_night = 'sound/music/area/angrywaters.ogg'
 	ambush_mobs = list(

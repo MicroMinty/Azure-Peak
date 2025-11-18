@@ -189,4 +189,12 @@
 	appearance_flags = NONE
 	opacity = FALSE
 
+/obj/structure/fluff/traveltile/dreamportal
+	name = "dream-gate"
+	desc = "This portal's edges waver like the fuzziness of a dream. Is it a good idea to step in?"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "anom"
+	aportalid = "dreamgate"
+	aportalgoesto = "AbyssIsle"
+
 /obj/structure/fluff/traveltile/eventarea
